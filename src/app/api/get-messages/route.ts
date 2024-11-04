@@ -47,5 +47,14 @@ export async function GET(request: Request) {
       },
       { status: 200 }
     );
-  } catch (error) {}
+  } catch (error) {
+    console.log('Something went wrong: ', error);
+    return Response.json(
+      {
+        success: false,
+        message: 'Something went wrong',
+      },
+      { status: 500 }
+    );
+  }
 }
