@@ -1,9 +1,5 @@
-import { getServerSession } from 'next-auth';
-import { authOptions } from '../auth/[...nextauth]/options';
 import dbConnect from '@/lib/dbConnect';
 import UserModel from '@/model/user';
-import { User } from 'next-auth';
-import mongoose from 'mongoose';
 import { Message } from '@/model/user';
 
 export async function POST(request: Request) {
